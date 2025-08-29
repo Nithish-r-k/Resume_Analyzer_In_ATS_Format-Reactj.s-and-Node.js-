@@ -1,0 +1,45 @@
+:root{
+  --bg1:#eef6ff; --bg2:#ffffff; --bg3:#f3e8ff;
+  --text:#1f1147; --muted:#6b6b7a;
+  --primary:#6d5efc; --primary2:#9b59ff; --btnText:#fff;
+  --green:#38a169; --blueBar:#7bb6ff; --purpleBar:#7a57c7;
+  --chipKeyBg:#eee0ff; --chipKeyText:#5b33b4;
+  --chipSkillBg:#e7f0ff; --chipSkillText:#2c62cc;
+  --card:#fff; --shadow:0 10px 25px rgba(28,21,53,.08);
+  --radius:18px; --font:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+}
+*{ box-sizing:border-box }
+html,body,#root{ height:100% }
+body{
+  margin:0; font-family:var(--font); color:var(--text);
+  background: radial-gradient(1200px 600px at -5% -10%, var(--bg1), transparent 60%),
+             radial-gradient(1200px 600px at 105% -10%, var(--bg3), transparent 60%),
+             var(--bg2);
+}
+.container{ max-width:1120px; margin:0 auto; padding:32px 16px; }
+.grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+@media (min-width:900px){ .grid{ grid-template-columns:1fr 1fr } }
+.card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
+.title{ font-size:48px; line-height:1.05; font-weight:800; margin:0; color:#5b21b6; }
+.subtitle{ margin:8px 0 6px; font-size:14px; color:var(--muted); font-weight:600; }
+.btn{
+  display:inline-block; padding:10px 16px; border:0; border-radius:14px;
+  background:linear-gradient(90deg,var(--primary),var(--primary2));
+  color:var(--btnText); font-weight:600; cursor:pointer;
+  transition:transform .05s ease, opacity .2s ease;
+}
+.btn:active{ transform:translateY(1px) } .btn:disabled{ opacity:.6; cursor:not-allowed }
+.input{ width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px; }
+.progress{ height:10px; border-radius:999px; background:#e6e6ea; overflow:hidden }
+.progress-bar{ height:100%; background:var(--green); border-radius:999px; transition:width .3s ease }
+.small-note{ margin-top:6px; font-size:12px; color:#8b8ca1 }
+.chips{ margin-top:10px } .chip{ display:inline-flex; align-items:center; padding:6px 12px; border-radius:999px; font-size:13px; margin:0 8px 8px 0 }
+.chip-key{ background:var(--chipKeyBg); color:var(--chipKeyText) }
+.chip-skill{ background:var(--chipSkillBg); color:var(--chipSkillText) }
+.fakebar{ height:12px; border-radius:999px; margin-bottom:12px }
+.fakebar.blue{ background:var(--blueBar); width:260px } .fakebar.purple{ background:var(--purpleBar); width:190px }
+.flex{ display:flex; align-items:center } .ml-24{ margin-left:24px }
+.mt-8{ margin-top:8px } .mt-16{ margin-top:16px } .mt-24{ margin-top:24px } .muted{ color:var(--muted) }
+.section-list{ margin-top:8px; font-size:13px; color:#4a4a5a }
+.section-list span{ display:inline-block; margin:0 8px 6px 0; padding:4px 10px; border-radius:999px; background:#f2f3f7 }
+.section-list .miss{ background:#ffe8ea; color:#c62828 }
