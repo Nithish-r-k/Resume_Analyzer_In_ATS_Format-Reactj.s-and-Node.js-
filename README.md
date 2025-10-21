@@ -77,6 +77,6 @@ It extracts text from resumes, checks for keywords, evaluates section completene
 
 **👨‍💻 Author**
 
-Nithish R K
+Nithish R 
 🚀 GitHub: Nithish-r-k
 
